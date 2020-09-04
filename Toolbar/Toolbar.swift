@@ -131,7 +131,7 @@ public class Toolbar: UIView {
         }
     }
 
-    private func setConstraints() {
+    public func setConstraints() {
         self.removeConstraints([self.minimumHeightConstraint,
                                 self.maximumHeightConstraint,
                                 self.leadingConstraint,
@@ -175,7 +175,7 @@ public class Toolbar: UIView {
         return self.cachedIntrinsicContentSize
     }
 
-    // MARK: - 
+    // MARK: -
     
     public func setItems(_ items: [ToolbarItem], animated: Bool) {
         self.stackView.arrangedSubviews.forEach { (view) in
@@ -209,7 +209,7 @@ public class Toolbar: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.distribution = .fillProportionally
         view.alignment = .bottom
-        view.spacing = 0
+        view.spacing = -8
         return view
     }()
     
